@@ -32,6 +32,12 @@ vi config/web.php +12
     'charset'   => 'utf8',
 ],
 ```
+vi config/local.php +17
+'db' => [
+            'dsn'       => 'mysql:host=127.0.0.1;dbname=walle',
+            'username'  => 'root',
+            'password'  => '123456', #此处设置mysql的连接密码，默认为空
+        ],
 
 3.安装composer，如果已安装跳过
 ---------------------------
@@ -114,6 +120,5 @@ CustomLog logs/dev.-accesslog common
 访问地址：localhost
 
 当然，可能你配置nginx时的server_name是walle.compony.com时，配置本地hosts之后，直接访问：walle.compony.com亦可。
-
 
 
